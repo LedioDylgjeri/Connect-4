@@ -1,0 +1,58 @@
+body {
+  background: rgb(32, 1, 55);
+  background: linear-gradient(45deg, rgb(63, 2, 107) 0%, rgba(9,121,102,1) 35%, rgba(0,212,255,1) 100%);
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  height: 100vh;
+}
+
+
+#connect {
+  position: relative;
+  margin-top: 100px;
+  color: rgba(132, 7, 132, 0.797);
+  font-size: 25px;
+
+}
+
+#four {
+  margin-top: -265px;
+  font-size: 75px;
+  position: relative;
+  z-index: -1;
+  color: rgb(8, 73, 236);
+}
+
+h3 {
+  margin-top: -140px;
+}
+
+#game-board {
+  background: linear-gradient(200deg, rgb(10, 3, 146) 0%, rgba(9,9,121,1)  35%, rgba(0,212,255,1) 100%);
+  box-shadow: 10px 10px 10px rgba(0, 8, 255, 0.409);
+  height: 378px;
+  width: 430px;
+  border: 5px solid blue;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+#game-board div {
+  background-color: white;
+  border: 3px solid rgb(7, 11, 237);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: 1px;
+  display: inline-flex;
+  justify-items: center;
+  justify-content: center;
+}
+
+#rst-btn {
+  font-size: 15px;
+  background: rgba(6, 162, 246, 0.992);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(165, 5, 5);
+}
