@@ -1,6 +1,6 @@
 body {
   background: rgb(32, 1, 55);
-  background: linear-gradient(45deg, rgb(161, 45, 244) 0%, rgba(9,121,102,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(45deg, rgb(166, 62, 240) 0%, rgb(17, 183, 155) 35%, rgb(127, 222, 240) 100%);
   text-align: center;
   font-family: 'Kanit', sans-serif;
   height: 100vh;
@@ -16,15 +16,15 @@ body {
 }
 
 #four {
-  margin-top: -265px;
-  font-size: 75px;
+  margin-top: -250px;
+  font-size: 70px;
   position: relative;
-  z-index: -1;
+  z-index: -1; 
   color: rgb(8, 73, 236);
 }
 
 h3 {
-  margin-top: -140px;
+  margin-top: -100px;
   color: rgb(116, 9, 159);
 }
 
@@ -34,7 +34,7 @@ h3 {
   height: 378px;
   width: 430px;
   border: 5px solid blue;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 20px auto;
 }
 
@@ -48,10 +48,16 @@ h3 {
   display: inline-flex;
 }
 
+#game-board div:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+
 #rst-btn {
   font-size: 15px;
   background: rgba(70, 182, 243, 0.992);
   padding: 5px;
   border-radius: 5px;
   color: rgb(116, 9, 159);
+  cursor: pointer;
 }
