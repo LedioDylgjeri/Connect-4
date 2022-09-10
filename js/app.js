@@ -36,5 +36,12 @@ function startGame() {
     }
     boardEl[idx].style.backgroundColor = cirColor
   })
+  
+  if(!winner) {
+    message.textContent = `It is ${player === 1 ? 'Red' : 'Yellow'}'s turn to choose`
+  }
+  if(winner === 'tie') {
+    message.textContent = `It's a tie 😑`
+  }
 }
 
