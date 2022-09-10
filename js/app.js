@@ -7,7 +7,7 @@ let player, winner, board
 /* ----------------------- Cached Element Rererences ---------------------------- */
 const message = document.getElementById('message')
 const boardEl = document.querySelectorAll('section > div')
-const rstButton = document.getElementById('#rst-btn')
+const rstButton = document.getElementById('rst-btn')
 
 /* ------------------------------ Functions ------------------------------------- */
 init()
@@ -39,9 +39,10 @@ function startGame() {
   
   if(!winner) {
     message.textContent = `It is ${player === 1 ? 'Red' : 'Yellow'}'s turn to choose`
-  }
-  if(winner === 'tie') {
+  } else if(winner === 'tie') {
     message.textContent = `It's a tie 😑`
+  } else {
+    message.textContent = `🤩 Congratulations!!! ${winner === 1 ? 'Red' : 'Yellow'} won 🥳`
   }
 }
 
