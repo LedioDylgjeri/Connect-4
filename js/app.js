@@ -1,23 +1,40 @@
 /* ------------------------------- Constants ------------------------------------ */
-let currentPlayer, winner;
 
 /* --------------------------- Variables (state) -------------------------------- */
-const message = document.getElementById('#meesage')
-const boardEl = document.querySelector('section')
-console.log(boardEl);
-const rstButton = document.getElementById('#rst-btn')
+let player, winner, board
 
 
 /* ----------------------- Cached Element Rererences ---------------------------- */
-boardEl.addEventListener('click', function(evt) {
-  // console.log(evt.target);
-  
-})
-
+const message = document.getElementById('message')
+const boardEl = document.querySelectorAll('section > div')
+const rstButton = document.getElementById('#rst-btn')
 
 /* ------------------------------ Functions ------------------------------------- */
 init()
 
 function init() {
-  turn = currentPlayer
+  board = [
+    null, null, null, null, null, null, null, null, null, null, null,
+    null, null, null, -1, null, null, 1, null, null, null, null,
+    null, null, null, null, null, null, null, null, null, null, 
+    null, null, null, null, null, null, null, null, null, null
+  ]
+  player = 1
+  winner = null
+  startGame()
 }
+
+function startGame() {
+  board.forEach((circle, idx) => {
+    let cirColor
+    if(circle === 1) {
+      cirColor = 'red'
+    } else if(circle === -1) {
+      cirColor = 'yellow'
+    } else if(circle === null) {
+      cirColor = ''
+    }
+    boardEl[idx].style.backgroundColor = cirColor
+  })
+}
+
