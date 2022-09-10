@@ -1,5 +1,5 @@
 /* ------------------------------- Constants ------------------------------------ */
-
+let currentPlayer, winner;
 
 /* --------------------------- Variables (state) -------------------------------- */
 const message = document.getElementById('#meesage')
@@ -10,10 +10,14 @@ const rstButton = document.getElementById('#rst-btn')
 
 /* ----------------------- Cached Element Rererences ---------------------------- */
 boardEl.addEventListener('click', function(evt) {
-  console.log(evt.target);
+  // console.log(evt.target);
+  
 })
 
 
 /* ------------------------------ Functions ------------------------------------- */
+init()
 
-
+function init() {
+  turn = currentPlayer
+}
