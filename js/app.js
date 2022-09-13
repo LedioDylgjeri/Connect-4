@@ -66,10 +66,11 @@ const rstBtn = document.getElementById('rst-btn')
 
 
 /*------------------------------ Event Listener -----------------------------*/
+
 gameBoard.forEach(function(elm) {
   elm.addEventListener('click', handleClick)
 })
-
+rstBtn.addEventListener('click', reset)
 
 /*--------------------------------- Functions ---------------------------------*/
 init()
@@ -86,6 +87,7 @@ function init() {
   winner = false
   player = 1
   rstBtn.setAttribute('hidden', true)
+  message.textContent = 'Click any circle to start game'
   renderBoard()
 }
 
@@ -129,11 +131,6 @@ function handleClick(){
 }
 
 function checkWinner() {
-  // let winCombo = []
-  // winArr.forEach(function(arr) {
-  //   let comboVal = board[arr[0]] + board[arr[1]] + board[arr[2]] + board[arr[3]]
-  //   winCombo.push(Math.abs(comboVal))
-  // })
   for (let i = 0; i < winArr.length; i++) {
     let total = board[winArr[i][0]] + board[winArr[i][1]] + board[winArr[i][2]] + board[winArr[i][3]]
     if (Math.abs(total) === 4) return board[winArr[i][0]]
@@ -144,14 +141,9 @@ function checkWinner() {
   } else {
     return null
   }
-
-  // let winnersCombo = winCombo.some(function(value){
-  //   return value === 4
-  // })
-//   if (winnersCombo === true) {
-//     return player * -1
-//   } else if (!board.some(function(value){return value === null})){
-//     return 'tie' 
-//   }
-//     return null
 }
+
+function reset() {
+  init()
+}
+
