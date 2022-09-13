@@ -58,3 +58,10 @@ section div {
   cursor: pointer;
 }
 
+.red-background {
+  background-color: red;
+}
+
+.yellow-background {
+  background-color: yellow;
+}

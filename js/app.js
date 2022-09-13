@@ -90,12 +90,14 @@ function init() {
 }
 
 function renderBoard() {
-  board.forEach(function(num, idx) {
+  board.forEach((num, idx) => {
     if(num === 1) {
-      gameBoard[idx].style.backgroundColor = 'red'
+      gameBoard[idx].classList.add('red-background')
     } else if(num === -1) {
-      gameBoard[idx].style.backgroundColor = 'yellow'
-    }  
+      gameBoard[idx].classList.add('yellow-background')
+    } else if(num === null) {
+      gameBoard[idx].style.backgroundColor = ''
+    } 
   })
   
   if(!winner) {
@@ -134,9 +136,9 @@ function checkWinner() {
     return value === 4
   })
   if (winnersCombo === true) {
-    return turn * -1
+    return player * -1
   } else if (!board.some(function(value){return value === null})){
-    return 'T' 
+    return 'tie' 
   }
     return null
 }
