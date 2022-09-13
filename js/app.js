@@ -77,7 +77,7 @@ let winner, player, board
 /*-------------------- Chached Element references --------------------------*/
 const message = document.getElementById('message')
 const gameBoard = document.querySelectorAll('section > div')
-// const startBtn = document.getElementById('start-btn')
+const startBtn = document.getElementById('start-btn')
 const rstBtn = document.getElementById('rst-btn')
 const favacon =
 
@@ -88,21 +88,22 @@ gameBoard.forEach(function(elm) {
   elm.addEventListener('click', handleClick)
 })
 
-// startBtn.addEventListener('click', startGame)
+startBtn.addEventListener('click', startGame)
 
 rstBtn.addEventListener('click', reset)
 
 /*--------------------------------- Functions ---------------------------------*/
-// function startGame() {
-// }
+function startGame() {
+  init()
+  renderBoard()
+}
 
-init()
 function init() {
   board = new Array(42).fill(null)
   winner = null
   player = 1
   rstBtn.setAttribute('hidden', true)
-  renderBoard()
+  //renderBoard()
 }
 
 function renderBoard() {

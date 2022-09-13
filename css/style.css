@@ -51,18 +51,18 @@ section div {
 
 #rst-btn {
   font-size: 15px;
-  background: rgba(70, 182, 243, 0.992);
+  background: rgba(241, 6, 6, 0.787);
   padding: 5px;
   border-radius: 5px;
-  color: rgb(116, 9, 159);
+  color: rgb(236, 243, 45);
   cursor: pointer;
 }
 
 #start-btn {
   font-size: 15px;
-  background: rgba(70, 182, 243, 0.992);
+  background: rgba(70, 182, 243, 0.559);
   padding: 5px;
   border-radius: 5px;
-  color: rgb(116, 9, 159);
+  color: rgb(12, 34, 158);
   cursor: pointer;
 }
