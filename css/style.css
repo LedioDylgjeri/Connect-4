@@ -48,7 +48,6 @@ section div {
   display: inline-flex;
 }
 
-
 #rst-btn {
   font-size: 15px;
   background: rgba(70, 182, 243, 0.992);
@@ -57,5 +56,3 @@ section div {
   color: rgb(116, 9, 159);
   cursor: pointer;
 }
-
-
