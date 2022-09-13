@@ -81,7 +81,7 @@ function init() {
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
     null, null, null, null, null, null, null, 
-    null, null, null, null, null, null, null 
+    null, null, null, null, null, null, null, 
   ]
   winner = false
   player = 1
@@ -91,13 +91,15 @@ function init() {
 
 function renderBoard() {
   board.forEach((num, idx) => {
+    let color
     if(num === 1) {
-      gameBoard[idx].classList.add('red-background')
+      color = 'red'
     } else if(num === -1) {
-      gameBoard[idx].classList.add('yellow-background')
+      color = 'yellow'
     } else if(num === null) {
-      gameBoard[idx].style.backgroundColor = ''
+      color = ''
     } 
+    gameBoard[idx].style.backgroundColor = color
   })
   
   if(!winner) {
@@ -114,31 +116,42 @@ function handleClick(){
   if(board[cirIdx] || winner) {
     return
   } else {
-    cellAddSub = 35
-    while(board[cirIdx + cellAddSub] !== null) {
-      cellAddSub -= 7
+    cellSub = 35
+    while(board[cirIdx + cellSub] !== null) {
+      cellSub -= 7
     }  
-    board[cirIdx + cellAddSub] = player
+    board[cirIdx + cellSub] = player
   }
   player *= -1
   rstBtn.removeAttribute('hidden')
   renderBoard()
-  player = checkWinner()
+  winner = checkWinner()
 }
 
 function checkWinner() {
-  let winCombo = []
-  winArr.forEach(function(arr) {
-    let comboVal = board[arr[0]] + board[arr[1]] + board[arr[2]] + board[arr[3]]
-    winCombo.push(Math.abs(comboVal))
-  })
-  let winnersCombo = winCombo.some(function(value){
-    return value === 4
-  })
-  if (winnersCombo === true) {
-    return player * -1
-  } else if (!board.some(function(value){return value === null})){
-    return 'tie' 
+  // let winCombo = []
+  // winArr.forEach(function(arr) {
+  //   let comboVal = board[arr[0]] + board[arr[1]] + board[arr[2]] + board[arr[3]]
+  //   winCombo.push(Math.abs(comboVal))
+  // })
+  for (let i = 0; i < winArr.length; i++) {
+    let total = board[winArr[i][0]] + board[winArr[i][1]] + board[winArr[i][2]] + board[winArr[i][3]]
+    if (Math.abs(total) === 4) return board[winArr[i][0]]
   }
+
+  if(board.includes(null)) {
+    return 'tie'
+  } else {
     return null
+  }
+
+  // let winnersCombo = winCombo.some(function(value){
+  //   return value === 4
+  // })
+//   if (winnersCombo === true) {
+//     return player * -1
+//   } else if (!board.some(function(value){return value === null})){
+//     return 'tie' 
+//   }
+//     return null
 }
