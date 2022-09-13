@@ -38,7 +38,7 @@ h2 {
   margin: 20px auto;
 }
 
-#game-board div {
+section div {
   background-color: rgb(216, 216, 216);
   border: 3px solid rgb(7, 11, 237);
   height: 50px;
@@ -48,12 +48,6 @@ h2 {
   display: inline-flex;
 }
 
-#game-board div:hover {
-  /* background-color: rgb(127, 222, 240); */
-  background: rgb(32, 1, 55);
-  background: linear-gradient(45deg, rgb(166, 62, 240) 0%, rgb(17, 183, 155) 35%, rgb(127, 222, 240) 100%);
-  cursor: pointer;
-}
 
 #rst-btn {
   font-size: 15px;
