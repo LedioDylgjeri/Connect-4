@@ -77,6 +77,7 @@ let winner, player, board
 /*-------------------- Chached Element references --------------------------*/
 const message = document.getElementById('message')
 const gameBoard = document.querySelectorAll('section > div')
+const startBtn = document.getElementById('start-btn')
 const rstBtn = document.getElementById('rst-btn')
 
 
@@ -86,16 +87,20 @@ gameBoard.forEach(function(elm) {
   elm.addEventListener('click', handleClick)
 })
 
+startBtn.addEventListener('click', startGame)
+
 rstBtn.addEventListener('click', reset)
 
 /*--------------------------------- Functions ---------------------------------*/
-init()
+function startGame() {
+  init()
+}
+
 function init() {
   board = new Array(42).fill(null)
   winner = null
   player = 1
   rstBtn.setAttribute('hidden', true)
-  message.textContent = 'Click any circle to start game'
   renderBoard()
 }
 
@@ -114,7 +119,7 @@ function renderBoard() {
   if(!winner) {
     message.textContent = `It is ${player === 1 ? 'Red' : 'Yellow'}'s turn to choose`
   } else if(winner === 'tie') {
-    message.textContent = `It's a tie 😑`
+    message.textContent = `The game is a tie 😑`
   } else {
     message.textContent = `🤩 Congratulations!!! ${winner === 1 ? 'Red' : 'Yellow'} won 🥳`
   }
@@ -153,4 +158,5 @@ function checkWinner() {
 
 function reset() {
   init()
+  message.textContent = 'Click any circle to start game'
 }

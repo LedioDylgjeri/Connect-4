@@ -56,3 +56,12 @@ section div {
   color: rgb(116, 9, 159);
   cursor: pointer;
 }
+
+#start-btn {
+  font-size: 15px;
+  background: rgba(70, 182, 243, 0.992);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(116, 9, 159);
+  cursor: pointer;
+}
