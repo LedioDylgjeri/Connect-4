@@ -80,6 +80,7 @@ const gameBoard = document.querySelectorAll('section > div')
 const rstBtn = document.getElementById('rst-btn')
 const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
+const gameOver = new Audio('../assets/audio/gameover.wav')
 
 /*------------------------------ Event Listener -----------------------------*/
 gameBoard.forEach(function(elm) {
@@ -141,12 +142,12 @@ function handleClick(){
   }
   player *= -1
   if(player === 1) {
-    redSound.volume = .10
+    redSound.volume = .30
     redSound.currentTime = 1
     redSound.play()
   }
   if(player === -1) {
-    yellowSound.volume = .10
+    yellowSound.volume = .30
     yellowSound.currentTime = 1
     yellowSound.play()
   }
@@ -159,6 +160,9 @@ function checkWinner() {
   for (let i = 0; i < winArr.length; i++) {
     let total = board[winArr[i][0]] + board[winArr[i][1]] + board[winArr[i][2]] + board[winArr[i][3]]
     if (Math.abs(total) === 4) {
+      gameOver.volume = .10
+      gameOver.currentTime = 1
+      gameOver.play()
       return board[winArr[i][0]]
     }
   }

@@ -1,7 +1,8 @@
 body {
   background: rgb(32, 1, 55);
   background: linear-gradient(45deg, rgb(166, 62, 240) 0%, rgb(17, 183, 155) 35%, rgb(127, 222, 241) 100%);
-  /* background-image: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg); */
+  /* background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-600w-1605128917.jpg); 
+  background-size: cover; */
   text-align: center;
   font-family: 'Kanit', sans-serif;
   height: 100vh;
