@@ -81,6 +81,7 @@ const rstBtn = document.getElementById('rst-btn')
 const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
 const gameOver = new Audio('../assets/audio/gameover.wav')
+const playAgain = new Audio('../assets/audio/playagain.mp3')
 
 /*------------------------------ Event Listener -----------------------------*/
 gameBoard.forEach(function(elm) {
@@ -100,6 +101,7 @@ function init() {
   player = 1
   rstBtn.setAttribute('hidden', true)
   renderBoard()
+  message.textContent = 'Click any ⚪️ to start game'
 }
 
 function renderBoard() {
@@ -107,14 +109,8 @@ function renderBoard() {
     let bcgColor
     if(num === 1) {
       bcgColor = 'red'
-      // redSound.volume = .10
-      // redSound.currentTime = 1
-      // redSound.play()
     } else if(num === -1) {
       bcgColor = 'yellow'
-      // yellowSound.volume = .10
-      // yellowSound.currentTime = 1
-      // yellowSound.play()
     } else if(num === null) {
       bcgColor = ''
     } 
@@ -174,6 +170,9 @@ function checkWinner() {
 }
 
 function reset() {
+  playAgain.volum = .10
+  //playAgain.currentTime = 1
+  playAgain.play()
   init()
-  message.textContent = 'Click any circle to start game'
+  message.textContent = 'Click any ⚪️ to start game'
 }
