@@ -106,14 +106,14 @@ function renderBoard() {
     let bcgColor
     if(num === 1) {
       bcgColor = 'red'
-      redSound.volume = .10
-      redSound.currentTime = 1
-      redSound.play()
+      // redSound.volume = .10
+      // redSound.currentTime = 1
+      // redSound.play()
     } else if(num === -1) {
       bcgColor = 'yellow'
-      yellowSound.volume = .10
-      yellowSound.currentTime = 1
-      yellowSound.play()
+      // yellowSound.volume = .10
+      // yellowSound.currentTime = 1
+      // yellowSound.play()
     } else if(num === null) {
       bcgColor = ''
     } 
@@ -140,6 +140,16 @@ function handleClick(){
     board[cirIdx + circles] = player
   }
   player *= -1
+  if(player === 1) {
+    redSound.volume = .10
+    redSound.currentTime = 1
+    redSound.play()
+  }
+  if(player === -1) {
+    yellowSound.volume = .10
+    yellowSound.currentTime = 1
+    yellowSound.play()
+  }
   rstBtn.removeAttribute('hidden')
   winner = checkWinner()
   renderBoard()
