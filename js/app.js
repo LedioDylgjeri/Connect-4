@@ -78,10 +78,11 @@ let winner, player, board
 const message = document.getElementById('message')
 const gameBoard = document.querySelectorAll('section > div')
 const rstBtn = document.getElementById('rst-btn')
-
+const redSound = new Audio('../assets/audio/red.mp3')
+const yellowSound = new Audio('../assets/audio/yellow.mp3')
+console.log(redSound);
 
 /*------------------------------ Event Listener -----------------------------*/
-
 gameBoard.forEach(function(elm) {
   elm.addEventListener('click', handleClick)
 })
@@ -93,10 +94,10 @@ rstBtn.addEventListener('click', reset)
 init()
 
 function init() {
+  message.textContent = 'Click any circle to start game'
   board = new Array(42).fill(null)
   winner = null
   player = 1
-  message.textContent = 'Click any circle to start game'
   rstBtn.setAttribute('hidden', true)
   renderBoard()
 }
@@ -134,8 +135,13 @@ function handleClick(){
     board[cirIdx + rowSub] = player
   }
   player *= -1
+  if(board[cirIdx]) {
+    redSound.volume =.10
+    redSound.play()
+  }
   rstBtn.removeAttribute('hidden')
   winner = checkWinner()
+  renderBoard()
   renderBoard()
 }
 
