@@ -80,7 +80,6 @@ const gameBoard = document.querySelectorAll('section > div')
 const rstBtn = document.getElementById('rst-btn')
 const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
-console.log(redSound);
 
 /*------------------------------ Event Listener -----------------------------*/
 gameBoard.forEach(function(elm) {
@@ -89,12 +88,12 @@ gameBoard.forEach(function(elm) {
 
 rstBtn.addEventListener('click', reset)
 
+
 /*--------------------------------- Functions ---------------------------------*/
 
 init()
 
 function init() {
-  message.textContent = 'Click any circle to start game'
   board = new Array(42).fill(null)
   winner = null
   player = 1
@@ -107,8 +106,14 @@ function renderBoard() {
     let bcgColor
     if(num === 1) {
       bcgColor = 'red'
+      redSound.volume = .10
+      redSound.currentTime = 1
+      redSound.play()
     } else if(num === -1) {
       bcgColor = 'yellow'
+      yellowSound.volume = .10
+      yellowSound.currentTime = 1
+      yellowSound.play()
     } else if(num === null) {
       bcgColor = ''
     } 
@@ -125,23 +130,18 @@ function renderBoard() {
 
 function handleClick(){
   let cirIdx = parseInt(this.id)
-  if(board[cirIdx] || winner) {
-    return
-  } else {
-    rowSub = 35
-    while(board[cirIdx + rowSub] !== null) {
-      rowSub -= 7
+  console.log(cirIdx);
+  if(board[cirIdx] || winner) { return }
+  else {
+    circles = 35
+    while(board[cirIdx + circles] !== null) {
+      circles -= 7
     }  
-    board[cirIdx + rowSub] = player
+    board[cirIdx + circles] = player
   }
   player *= -1
-  if(board[cirIdx]) {
-    redSound.volume =.10
-    redSound.play()
-  }
   rstBtn.removeAttribute('hidden')
   winner = checkWinner()
-  renderBoard()
   renderBoard()
 }
 
