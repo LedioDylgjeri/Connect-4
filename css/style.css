@@ -66,6 +66,60 @@ section div {
   body {
     background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-600w-1605128917.jpg); 
     background-size: cover;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
+  }
+  #connect {
+    position: relative;
+    margin-top: 70px;
+    color: rgba(33, 233, 233, 0.797);
+    font-size: 15px;
+  
+  }
+  
+  #four {
+    margin-top: -140px;
+    font-size: 40px;
+    position: relative;
+    z-index: -1; 
+    color: rgb(233, 31, 9);
+  }
+  
+  h2 {
+    margin-top: -50px;
+    color: rgb(33, 233, 233, 0.797);
+  }
+  
+  #game-board {
+    background: linear-gradient(210deg, rgb(117, 117, 122) 0%, rgb(80, 80, 82)  35%, rgb(34, 35, 35) 100%);
+    box-shadow: 15px 15px 15px rgba(59, 234, 243, 0.335);
+    height: 260px;
+    width: 290px;
+    border: 5px solid rgb(115, 115, 120);
+    border-radius: 10px;
+    margin: 20px auto;
+  }
+  
+  section div {
+    background-color: rgba(59, 234, 243, 0.335);
+    border: 3px solid rgb(146, 147, 152);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 1px;
+    display: inline-flex;
+    cursor: pointer;
+  }
+  
+  #rst-btn {
+    font-size: 15px;
+    background: rgba(241, 6, 6, 0.787);
+    box-shadow: 5px 5px 5px rgba(245, 10, 10, 0.603);
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(236, 243, 45);
+    cursor: pointer;
   }
 }
 
