@@ -16,7 +16,6 @@ This game consists of 6 rows and 7 columns. Players alternately fill the white c
 * HTML
 * CSS
 * JavaScript
-* google fonts
 
 ## Credits:
 * google fonts
