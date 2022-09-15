@@ -12,6 +12,7 @@ const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
 const gameOver = new Audio('../assets/audio/gameover.wav')
 const playAgain = new Audio('../assets/audio/playagain.mp3')
+const mediaQuery = window.matchMedia('(max-width: 500px)')
 
 /*------------------------------ Event Listener -----------------------------*/
 gameBoard.forEach(function(elm) {
@@ -43,6 +44,17 @@ function renderBoard() {
     } else if(num === null) {
       bcgColor = ''
     } 
+    if(mediaQuery.matches) {
+      if(num === 1) {
+        bcgColor = 'magenta'
+      }
+      if (num === -1) {
+        bcgColor = 'lime'
+      }
+      if(num === null) {
+        bcgColor = ''
+      }
+    }
     gameBoard[idx].style.backgroundColor = bcgColor
   })
   if(!winner) {
