@@ -1,4 +1,5 @@
 import { winArr } from './data.js';
+
 /*--------------------------------- State ----------------------------------*/
 let winner, player, board
 
@@ -20,8 +21,7 @@ gameBoard.forEach(function(elm) {
 rstBtn.addEventListener('click', reset)
 
 
-/*--------------------------------- Functions ---------------------------------*/
-
+/*--------------------------------- Functions --------------------------------*/
 init()
 
 function init() {
@@ -56,7 +56,6 @@ function renderBoard() {
 
 function handleClick(){
   let cirIdx = parseInt(this.id)
-  console.log(cirIdx);
   if(board[cirIdx] || winner) { return }
   else {
     let circles = 35
@@ -88,6 +87,7 @@ function checkWinner() {
       gameOver.volume = .10
       gameOver.currentTime = 1
       gameOver.play()
+      confetti.start(4000)
       return board[winArr[i][0]]
     }
   }
