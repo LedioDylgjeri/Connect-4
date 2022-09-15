@@ -99,12 +99,12 @@ function handleClick(){
   if(mediaQuery.matches) {
     if(player === 1) {
       redSound.volume = .10
-      redSound.currentTime = .2
+      redSound.currentTime = .7
       redSound.play()
     }
     if(player === -1) {
       yellowSound.volume = .10
-      yellowSound.currentTime = .2
+      yellowSound.currentTime = .7
       yellowSound.play()
     }
   }
@@ -122,9 +122,8 @@ function checkWinner() {
       confetti.start(4000)
       if(mediaQuery.matches){
       gameOver.volume = .10
-      gameOver.currentTime = .4
       gameOver.play()
-      confetti.start(4000)
+      confetti.start(3000)
       }
       return board[winArr[i][0]]
     }
