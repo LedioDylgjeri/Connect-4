@@ -69,7 +69,7 @@ section div {
   background-color: rgba(241, 7, 7, 0.839)
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-600w-1605128917.jpg); 
     background-size: cover;

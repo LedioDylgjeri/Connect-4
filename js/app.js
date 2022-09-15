@@ -8,7 +8,7 @@ let winner, player, board
 const message = document.getElementById('message')
 const gameBoard = document.querySelectorAll('section > div')
 const rstBtn = document.getElementById('rst-btn')
-const mediaQuery = window.matchMedia('(max-width: 500px)')
+const mediaQuery = window.matchMedia('(max-width: 600px)')
 const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
 const gameOver = new Audio('../assets/audio/gameover.wav')
@@ -63,6 +63,15 @@ function renderBoard() {
     message.textContent = `The game is a tie 😑`
   } else {
     message.textContent = `🤩 Congratulations‼️ ${winner === 1 ? 'Red' : 'Yellow'} won 🥳`
+  }
+  if(mediaQuery.matches) {
+    if(!winner) {
+      message.textContent = `It is ${player === 1 ? 'Magenta' : 'Lime'}'s turn to choose`
+    } else if(winner === 'tie') {
+      message.textContent = `The game is a tie 😤`
+    } else {
+      message.textContent = `✨ Congratulations‼️ ${winner === 1 ? 'Magenta' : 'Lime'} won 😎`
+    }
   }
 }
 
