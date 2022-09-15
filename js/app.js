@@ -99,13 +99,11 @@ function handleClick(){
   if(mediaQuery.matches) {
     if(player === 1) {
       redSound.volume = .10
-      redSound.currentTime = .7
-      redSound.play()
+      redSound.currentTime = .2
     }
     if(player === -1) {
       yellowSound.volume = .10
-      yellowSound.currentTime = .7
-      yellowSound.play()
+      yellowSound.currentTime = .2
     }
   }
   rstBtn.removeAttribute('hidden')
@@ -121,9 +119,7 @@ function checkWinner() {
       gameOver.play()
       confetti.start(4000)
       if(mediaQuery.matches){
-      gameOver.volume = .10
-      gameOver.play()
-      confetti.start(3000)
+      confetti.start(2000)
       }
       return board[winArr[i][0]]
     }
@@ -139,9 +135,7 @@ function reset() {
   playAgain.volume = .10
   playAgain.play()
   if(mediaQuery.matches) {
-    playAgain.volume = .10
     playAgain.currentTime = .1
-    playAgain.play()
   }
   init()
 }

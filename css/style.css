@@ -31,14 +31,14 @@ h2 {
 #game-board {
   background: linear-gradient(210deg, rgb(10, 3, 146) 0%, rgba(9,9,121,1)  35%, rgba(0,212,255,1) 100%);
   box-shadow: 15px 15px 15px rgba(0, 8, 255, 0.409);
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-templete-rows: repeat(6, 60px);
   height: 378px;
   width: 420px;
   border: 5px solid blue;
   border-radius: 10px;
   margin: 20px auto;
-  display: grid;
-  grid-templete-rows: repeat(6, 60px);
-  grid-template-columns: repeat(7, 60px);
 }
 
 section div {
@@ -101,14 +101,14 @@ section div {
   #game-board {
     background: linear-gradient(210deg, rgb(117, 117, 122) 0%, rgb(80, 80, 82)  35%, rgb(34, 35, 35) 100%);
     box-shadow: 7px 7px 7px rgba(59, 234, 243, 0.335);
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-templete-rows: repeat(6, 40px);
     height: 260px;
     width: 280px;
     border: 5px solid rgb(115, 115, 120);
     border-radius: 10px;
     margin: 20px auto;
-    display: grid;
-    grid-templete-rows: repeat(6, 40px);
-    grid-template-columns: repeat(7, 40px);
   }
   
   section div {
