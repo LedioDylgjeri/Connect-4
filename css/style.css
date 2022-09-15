@@ -12,7 +12,6 @@ body {
   margin-top: 70px;
   color: rgba(116, 9, 159, 0.797);
   font-size: 25px;
-
 }
 
 #four {
@@ -82,11 +81,10 @@ section div {
     margin-top: 70px;
     color: rgba(33, 233, 233, 0.797);
     font-size: 15px;
-  
   }
   
   #four {
-    margin-top: -140px;
+    margin-top: -144px;
     font-size: 40px;
     position: relative;
     z-index: -1; 
