@@ -51,12 +51,22 @@ section div {
 
 #rst-btn {
   font-size: 15px;
-  background: rgba(241, 6, 6, 0.787);
-  box-shadow: 5px 5px 5px rgba(245, 10, 10, 0.603);
-  padding: 5px;
+  background: rgba(139, 7, 226, 0.787);
+  box-shadow: 7px 7px 7px rgba(236, 243, 45, 0.624);
+  padding: 10px;
   border-radius: 5px;
+  border: none;
   color: rgb(236, 243, 45);
   cursor: pointer;
+}
+
+#rst-btn:hover {
+  font-size: 20px; 
+  -webkit-transition: font-size .6s ease-in-out;
+  -moz-transition: font-size .6s ease-in-out;
+  -o-transition: font-size .6s ease-in-out;
+  transition: font-size .6s ease-in-out;
+  background-color: rgba(241, 7, 7, 0.839)
 }
 
 @media screen and (max-width: 500px) {
@@ -90,7 +100,7 @@ section div {
   
   #game-board {
     background: linear-gradient(210deg, rgb(117, 117, 122) 0%, rgb(80, 80, 82)  35%, rgb(34, 35, 35) 100%);
-    box-shadow: 10px 10px 10px rgba(59, 234, 243, 0.335);
+    box-shadow: 7px 7px 7px rgba(59, 234, 243, 0.335);
     height: 260px;
     width: 290px;
     border: 5px solid rgb(115, 115, 120);
@@ -111,12 +121,22 @@ section div {
   
   #rst-btn {
     font-size: 15px;
-    background: rgba(241, 6, 6, 0.787);
-    box-shadow: 4px 4px 4px rgba(245, 10, 10, 0.603);
+    background: rgba(239, 7, 236, 0.787);
+    box-shadow: 4px 4px 4px rgba(10, 228, 43, 0.603);
     padding: 5px;
+    border: none;
     border-radius: 5px;
-    color: rgb(236, 243, 45);
+    color: rgb(85, 234, 11);
     cursor: pointer;
+  }
+
+  #rst-btn:hover {
+    font-size: 17px; 
+    -webkit-transition: font-size .6s ease-in-out;
+    -moz-transition: font-size .6s ease-in-out;
+    -o-transition: font-size .6s ease-in-out;
+    transition: font-size .6s ease-in-out;
+    background-color: rgba(241, 19, 7, 0.839)
   }
 }
 

@@ -8,11 +8,11 @@ let winner, player, board
 const message = document.getElementById('message')
 const gameBoard = document.querySelectorAll('section > div')
 const rstBtn = document.getElementById('rst-btn')
+const mediaQuery = window.matchMedia('(max-width: 500px)')
 const redSound = new Audio('../assets/audio/red.mp3')
 const yellowSound = new Audio('../assets/audio/yellow.mp3')
 const gameOver = new Audio('../assets/audio/gameover.wav')
 const playAgain = new Audio('../assets/audio/playagain.mp3')
-const mediaQuery = window.matchMedia('(max-width: 500px)')
 
 /*------------------------------ Event Listener -----------------------------*/
 gameBoard.forEach(function(elm) {
@@ -48,7 +48,7 @@ function renderBoard() {
       if(num === 1) {
         bcgColor = 'magenta'
       }
-      if (num === -1) {
+      if(num === -1) {
         bcgColor = 'lime'
       }
       if(num === null) {
@@ -71,7 +71,7 @@ function handleClick(){
   if(board[cirIdx] || winner) { return }
   else {
     let circles = 35
-    while(board[cirIdx + circles] !== null) {
+    while (board[cirIdx + circles] !== null) {
       circles -= 7
     }  
     board[cirIdx + circles] = player
@@ -95,7 +95,7 @@ function handleClick(){
 function checkWinner() {
   for (let i = 0; i < winArr.length; i++) {
     let total = board[winArr[i][0]] + board[winArr[i][1]] + board[winArr[i][2]] + board[winArr[i][3]]
-    if (Math.abs(total) === 4) {
+    if(Math.abs(total) === 4) {
       gameOver.volume = .10
       gameOver.currentTime = 1
       gameOver.play()
