@@ -1,6 +1,6 @@
 # Connetct-4
 
-## Game Descrtiption:
+## Game descrtiption:
 This game consists of 6 rows and 7 columns. Players alternately fill the white circles with their chosen color until there is a winner or a tie.
 
 ## How the game is played:
@@ -9,7 +9,10 @@ This game consists of 6 rows and 7 columns. Players alternately fill the white c
 * Red player starts the game
 * Game ends when 4 circles match
 
-## Technologies Used:
+## Play game here:
+[Connect 4](https://connect4-lediod.netlify.app)
+
+## Technologies used:
 * HTML
 * CSS
 * JavaScript
@@ -19,11 +22,12 @@ This game consists of 6 rows and 7 columns. Players alternately fill the white c
 * google fonts
 * SEI-Remote/confetti:main
 
-## Game Preview:
-Web broweser:
-![alt text](./assets/READMEimg/Screen%20Shot%202022-09-15%20at%2011.23.06%20AM.png)
+## Game preview:
+Web browser:
+![For web browser](./assets/READMEimg/Screen%20Shot%202022-09-15%20at%2011.23.06%20AM.png)
+
 Tablet view:
-![alt text](./assets/READMEimg/Screen%20Shot%202022-09-15%20at%2011.28.23%20AM.png)
+![Tablet view](./assets/READMEimg/Screen%20Shot%202022-09-15%20at%2011.28.23%20AM.png)
 
 
 ## Next Steps:
