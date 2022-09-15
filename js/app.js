@@ -96,6 +96,18 @@ function handleClick(){
     yellowSound.currentTime = 1
     yellowSound.play()
   }
+  if(mediaQuery.matches) {
+    if(player === 1) {
+      redSound.volume = .10
+      redSound.currentTime = .2
+      redSound.play()
+    }
+    if(player === -1) {
+      yellowSound.volume = .10
+      yellowSound.currentTime = .2
+      yellowSound.play()
+    }
+  }
   rstBtn.removeAttribute('hidden')
   winner = checkWinner()
   renderBoard()
@@ -106,9 +118,14 @@ function checkWinner() {
     let total = board[winArr[i][0]] + board[winArr[i][1]] + board[winArr[i][2]] + board[winArr[i][3]]
     if(Math.abs(total) === 4) {
       gameOver.volume = .10
-      gameOver.currentTime = 1
       gameOver.play()
       confetti.start(4000)
+      if(mediaQuery.matches){
+      gameOver.volume = .10
+      gameOver.currentTime = .4
+      gameOver.play()
+      confetti.start(4000)
+      }
       return board[winArr[i][0]]
     }
   }
@@ -122,5 +139,10 @@ function checkWinner() {
 function reset() {
   playAgain.volume = .10
   playAgain.play()
+  if(mediaQuery.matches) {
+    playAgain.volume = .10
+    playAgain.currentTime = .1
+    playAgain.play()
+  }
   init()
 }
