@@ -61,7 +61,7 @@ section div {
 }
 
 #rst-btn:hover {
-  font-size: 20px; 
+  font-size: 18px; 
   -webkit-transition: font-size .6s ease-in-out;
   -moz-transition: font-size .6s ease-in-out;
   -o-transition: font-size .6s ease-in-out;
