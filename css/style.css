@@ -62,12 +62,10 @@ section div {
   cursor: pointer;
 }
 
-/* #start-btn {
-  font-size: 15px;
-  font-weight: bold;
-  background: rgba(70, 182, 243, 0.559);
-  padding: 5px;
-  border-radius: 5px;
-  color: rgb(12, 34, 158);
-  cursor: pointer;
-} */
+@media screen and (max-width: 700px) {
+  body {
+    background-image: url(https://image.shutterstock.com/image-photo/old-brick-black-color-wall-600w-1605128917.jpg); 
+    background-size: cover;
+  }
+}
+
