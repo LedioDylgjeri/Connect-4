@@ -1,5 +1,7 @@
 # Connect-4
 
+This was a chance to create a childhood game I couldn't get enough of.  
+
 ## Game descrtiption:
 This game consists of 6 rows and 7 columns. Players alternately fill the white circles with their chosen color until there is a winner or a tie.
 
