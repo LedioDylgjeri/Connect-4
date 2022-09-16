@@ -48,6 +48,10 @@ section div {
   cursor: pointer;
 }
 
+section div:hover {
+  background-color: rgba(76, 242, 231, 0.934);
+}
+
 #rst-btn {
   font-size: 15px;
   background: rgba(139, 7, 226, 0.787);
@@ -115,6 +119,10 @@ section div {
     border-radius: 50%;
     margin: 1px;
     cursor: pointer;
+  }
+
+  section div:hover {
+    background-color: rgba(76, 242, 231, 0.934);
   }
   
   #rst-btn {

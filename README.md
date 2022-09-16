@@ -31,6 +31,6 @@ Tablet view:
 ![Tablet view](./assets/READMEimg/Screen%20Shot%202022-09-15%20at%2011.28.23%20AM.png)
 
 
-## Next Steps:
+## Ice box:
 * Give players the option to choose what color they want to be
 * Add one player option that plays against the computer
